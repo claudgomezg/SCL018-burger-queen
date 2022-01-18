@@ -1,38 +1,58 @@
-/* .App {
-  text-align: center;
-}
+@media (min-width: 1024px) {
+  /* Home.jsx */
+  
+  .menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .logo {
+    display: flex;
+    /* margin-bottom: 10%; */
+    height: 40%;
+    justify-content: center;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .home-button {
+    margin-top: 2%;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5%;
+    text-align: center;
+    overflow:hidden;
+    transition: .3s;
+    background-color: white;
+    font-size: 30px;
+  }
+  .home-button:hover {
+    background-color: #ff0000;
+    color: white;
+    font-weight: bold;
+    font-size: 33px;
+  }
+  .back-button{
+    margin-top: 2%;
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5%;
+    text-align: center;
+    overflow:hidden;
+    transition: .3s;
+    background-color: white;
+    font-size: 15px;
+  }
+  .back-button:hover {
+    background-color: #ff0000;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
