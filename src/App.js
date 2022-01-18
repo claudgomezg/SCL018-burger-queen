@@ -2,7 +2,7 @@ import './App.css';
 import Home from './components/Home';
 import Waitress from './components/Waitress';
 import Kitchen from './components/Kitchen';
-import { Link, Route, Routes } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 
 
 

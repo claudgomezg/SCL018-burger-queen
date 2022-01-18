@@ -1,4 +1,4 @@
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) { */
   /* Home.jsx */
   
   .menu-container {
@@ -7,22 +7,26 @@
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    background-image: url("./assets/background.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
+
   .logo {
     display: flex;
-    /* margin-bottom: 10%; */
     height: 40%;
     justify-content: center;
+    margin-bottom: 3%;
   }
 
   .home-button {
-    margin-top: 2%;
-    height: 200px;
-    width: 300px;
+    height: 100px;
+    width: 200px;
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #000000;
-    border-radius: 5%;
+    padding: 5px;
+    border: 5px solid #000000;
+    box-shadow: 3px 3px 3px rgb(72,71,69);
     text-align: center;
     overflow:hidden;
     transition: .3s;
@@ -48,6 +52,7 @@
     transition: .3s;
     background-color: white;
     font-size: 15px;
+    box-shadow: 5px 5px 5px black;
   }
   .back-button:hover {
     background-color: #ff0000;
@@ -55,4 +60,7 @@
     font-weight: bold;
     font-size: 20px;
   }
-}
+  #meme {
+    height: 400px;
+  }
+/* } */

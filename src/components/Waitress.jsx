@@ -8,8 +8,8 @@ const Waitress = () => {
             <div className="waitress-container">
                 <Link to="/"><button className="back-button">Atrás</button></Link>
             </div>
-            <div className="waitress-container">
-                <img src={mesera} alt="mesera" />
+            <div className="meme">
+                <img src={mesera} alt="mesera" id="meme"  />
             </div>
         </>
     );
