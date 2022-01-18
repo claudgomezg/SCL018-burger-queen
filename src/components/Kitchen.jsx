@@ -9,8 +9,8 @@ const Kitchen = () => {
             <div className="kitchen-container">
                 <Link to="/"><button className="back-button">Atrás</button></Link>
             </div>
-            <div className="kitchen-container">
-                <img src={cocina} alt="cocina" />
+            <div className="meme">
+                <img src={cocina} alt="cocina" id="meme" />
             </div>
         </>
     );
