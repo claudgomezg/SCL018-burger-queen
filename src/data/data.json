@@ -1,0 +1,88 @@
+{
+    "Data" : [
+        {
+            "id": "r-01",
+            "product": "Miso Ramen",
+            "type": "Ramen",
+            "price": "5990",
+            "Description": "Base de pasta miso, cerdo, cebollín, huevo, hongos shitake, diente de dragón."
+        },
+        {
+            "id": "r-02",
+            "product": "Shio Ramen",
+            "type": "Ramen",
+            "price": "6990",
+            "Description": "Base salada, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón."
+        },
+        {
+            "id": "r-03",
+            "product": "Shoyu Ramen",
+            "type": "Ramen",
+            "price": "6990",
+            "Description": "Base dashi, carne, cebollín, huevo, alga nori, hongo shitake, diente de dragón."
+        },
+        {
+            "id": "r-04",
+            "product": "Tonkotsu Ramen",
+            "type": "Ramen",
+            "price": "6990",
+            "Description": "Base huesos de cerdo, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón."
+        },
+        {
+            "id": "d-01",
+            "product": "Gaseosa",
+            "type": "Drinks",
+            "price": "1200",
+            "Description": "CCU variedades, 500 ml."
+        },
+        {
+            "id": "d-02",
+            "product": "Agua Gasificada",
+            "type": "Drinks",
+            "price": "1000",
+            "Description": "Agua gasificada, 500 ml."
+        },
+        {
+            "id": "d-03",
+            "product": "Jugo Natural",
+            "type": "Drinks",
+            "price": "1600",
+            "Description": "Jugo natural Guayarauco, 500 ml."
+        },
+        {
+            "id": "d-04",
+            "product": "Sake",
+            "type": "Drinks",
+            "price": "2500",
+            "Description": "Sake Japonés, 300 ml."
+        },
+        {
+            "id": "s-01",
+            "product": "Espinaca",
+            "type": "SideDish",
+            "price": "1990",
+            "Description": "Espinacas salteadas."
+        },
+        {
+            "id": "s-02",
+            "product": "Tofu",
+            "type": "SideDish",
+            "price": "2990",
+            "Description": "Tofu frito, 3 unidades."
+        },
+        {
+            "id": "s-03",
+            "product": "Huevo extra",
+            "type": "SideDish",
+            "price": "990",
+            "Description": "Huevo marinado en soja."
+        },
+        {
+            "id": "s-04",
+            "product": "Tamagoyaki",
+            "type": "SideDish",
+            "price": "1990",
+            "Description": "Rollo de huevo, 3 unidades."
+        }
+    ]
+    }

@@ -1,14 +1,18 @@
 import React from "react";
+import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
-
+import "../App.css";
 
 const Home = () => {
     return (
         <>
-            <div className="m-20">
-                <div className="flex justify-center space-x-10">
-                    <Link to="/waitress"><button className="h-20 px-10 font-semibold text-lg text-teal-50 transition-colors duration-150 bg-teal-500 rounded-lg focus:shadow-outline hover:bg-teal-800">Waitress</button></Link>
-                    <Link to="/kitchen"><button className="h-20 px-10 font-semibold text-lg text-teal-50 transition-colors duration-150 bg-teal-500 rounded-lg focus:shadow-outline hover:bg-teal-800">Kitchen</button></Link>
+            <div className="menu-container">
+            <div className="logo">
+                    <img src={logo} alt="logo" />
+                </div>
+                <div className="button-menu">
+                    <Link to="/waitress"><button className="home-button">Pedidos</button></Link>
+                    <Link to="/kitchen"><button className="home-button">Cocina</button></Link>
                 </div>
             </div>
         </>
