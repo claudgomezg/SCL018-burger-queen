@@ -1,93 +1,96 @@
 {
-    "Data" : [
+    "mainFood": [
         {
             "id": "1",
-            "product": "Miso Ramen",
-            "type": "Ramen",
+            "name": "Miso Ramen",
             "price": "5990",
             "description": "Base de pasta miso, cerdo, cebollín, huevo, hongos shitake, diente de dragón.",
-            "image": "./data/data-img/miso-ramen.jpg"
+            "image": "./data/data-img/miso-ramen.jpg",
+            "quantity": 0
         },
         {
             "id": "2",
-            "product": "Shio Ramen",
-            "type": "Ramen",
+            "name": "Shio Ramen",
             "price": "6990",
             "Description": "Base salada, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/shio-ramen.jpg"
-        
+            "image": "./data/data-img/shio-ramen.jpg",
+            "quantity": 0
         },
         {
             "id": "3",
-            "product": "Shouyu Ramen",
-            "type": "Ramen",
+            "name": "Shouyu Ramen",
             "price": "6990",
             "Description": "Base dashi, carne, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/shouyu-ramen.jpg"
+            "image": "./data/data-img/shouyu-ramen.jpg",
+            "quantity": 0
         },
         {
             "id": "4",
-            "product": "Tonkotsu Ramen",
-            "type": "Ramen",
+            "name": "Tonkotsu Ramen",
             "price": "6990",
             "Description": "Base huesos de cerdo, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/tonkatsu-ramen.jpg"
-        },
+            "image": "./data/data-img/tonkatsu-ramen.jpg",
+            "quantity": 0
+        }
+    ],
+    "drinks": [
         {
             "id": "5",
-            "product": "Gaseosa",
-            "type": "Drinks",
+            "name": "Gaseosa",
             "price": "1200",
-            "Description": "CCU variedades, 500 ml."
+            "Description": "CCU variedades, 500 ml.",
+            "quantity": 0
         },
         {
             "id": "6",
-            "product": "Agua Gasificada",
-            "type": "Drinks",
+            "name": "Agua Gasificada",
             "price": "1000",
-            "Description": "Agua gasificada, 500 ml."
+            "Description": "Agua gasificada, 500 ml.",
+            "quantity": 0
         },
         {
             "id": "7",
-            "product": "Jugo Natural",
-            "type": "Drinks",
+            "name": "Jugo Natural",
             "price": "1600",
-            "Description": "Jugo natural Guayarauco, 500 ml."
+            "Description": "Jugo natural Guayarauco, 500 ml.",
+            "quantity": 0
         },
         {
             "id": "8",
-            "product": "Sake",
-            "type": "Drinks",
+            "name": "Sake",
             "price": "2500",
-            "Description": "Sake Japonés, 300 ml."
-        },
+            "Description": "Sake Japonés, 300 ml.",
+            "quantity": 0
+        }
+    ],
+    "sideDish": [
         {
             "id": "9",
-            "product": "Espinaca",
-            "type": "SideDish",
+            "name": "Espinaca",
             "price": "1990",
-            "Description": "Espinacas salteadas."
+            "Description": "Espinacas salteadas.",
+            "quantity": 0
         },
         {
             "id": "10",
-            "product": "Tofu",
-            "type": "SideDish",
+            "name": "Tofu",
             "price": "2990",
-            "Description": "Tofu frito, 3 unidades."
+            "Description": "Tofu frito, 3 unidades.",
+            "quantity": 0
         },
         {
             "id": "11",
-            "product": "Huevo extra",
-            "type": "SideDish",
+            "name": "Huevo extra",
             "price": "990",
-            "Description": "Huevo marinado en soja."
+            "Description": "Huevo marinado en soja.",
+            "quantity": 0
         },
         {
             "id": "12",
-            "product": "Tamagoyaki",
-            "type": "SideDish",
+            "name": "Tamagoyaki",
             "price": "1990",
-            "Description": "Rollo de huevo, 3 unidades."
+            "Description": "Rollo de huevo, 3 unidades.",
+            "quantity": 0
         }
     ]
-    }
+}
