@@ -1,16 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import mesera from "../assets/mesera.jpg";
+// import { Link } from "react-router-dom";
+import { Header } from "../components/Header.jsx";
 
 const Waitress = () => {
     return (
         <>
-            <div className="waitress-container">
-                <Link to="/"><button className="back-button">Atrás</button></Link>
-            </div>
-            <div className="meme">
-                <img src={mesera} alt="mesera" id="meme"  />
-            </div>
+        <div className="waitress-container">
+        <Header/>{/*componente hder */}
+        </div>
         </>
     );
 };
