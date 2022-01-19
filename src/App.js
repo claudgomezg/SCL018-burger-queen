@@ -1,7 +1,7 @@
 import './App.css';
 import Home from './components/Home';
-import Waitress from './components/Waitress';
 import Kitchen from './components/Kitchen';
+import Waitress from './components/Waitress';
 import {Route, Routes } from 'react-router-dom';
 
 const App = () => {

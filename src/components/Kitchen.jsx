@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import cocina from "../assets/cocina.jpg";
 
 const Kitchen = () => {
     return (
@@ -9,9 +8,9 @@ const Kitchen = () => {
             <div className="kitchen-container">
                 <Link to="/"><button className="back-button">Atrás</button></Link>
             </div>
-            <div className="meme">
+            {/* <div className="meme">
                 <img src={cocina} alt="cocina" id="meme" />
-            </div>
+            </div> */}
         </>
     );
 };

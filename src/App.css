@@ -11,6 +11,11 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    
   }
 
   .logo-home {
@@ -33,12 +38,14 @@
     background-color: white;
     font-size: 30px;
   }
+
   .home-button:hover {
     background-color: #ff0000;
     color: white;
     font-weight: bold;
     font-size: 33px;
   }
+
   .back-button{
     margin-top: 2%;
     height: 50px;
@@ -63,29 +70,19 @@
     font-size: 20px;
   }
 
-  #meme {
-    height: 400px;
-  }
-
-  /* Waitress.jsx */
-  /* .waitress-container {
-    position: relative; 
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-
-  .waitress-container::before {
-    content: "";
-    background-image: url(./assets/waitress-bg5.png);
+  .waitress-container {
+    background: url(./assets/waitress-bg2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
 
   /* Header */
@@ -95,7 +92,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    background-color:#000000ed;
+    background-color:#9226269f;
     height: 10%;
     margin-top: 0%;
     /* padding: 12px; */
@@ -122,5 +119,9 @@
     margin: 10px;
   }
 
+  /* Menu elements */
 
+  .menu-title {
+    align-self: center;
+  }
 /* } */
