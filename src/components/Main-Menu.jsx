@@ -2,8 +2,6 @@ import React from 'react'
 import menu from '../data/data.json'
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
-// import ListGroup from 'react-bootstrap/ListGroup';
-
 
 export const Food = () => {
     const mainDish = menu.mainFood
@@ -19,7 +17,6 @@ export const Food = () => {
                         <Accordion.Body>
                             {mainDish.map((e, index) => {
                                 return (
-
                                     <Button variant="outline-primary" size="sm" className='ramen-btn' key={index}>
                                         <img src={e.image} alt="ramenImage" className="ramen-image" />  {e.name} ${e.price}
                                     </Button>
@@ -39,6 +36,7 @@ export const Food = () => {
                                 )
                             })}
                         </Accordion.Body>
+
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>Agregados</Accordion.Header>
