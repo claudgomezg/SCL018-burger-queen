@@ -5,7 +5,7 @@
             "name": "Miso Ramen",
             "price": "5990",
             "description": "Base de pasta miso, cerdo, cebollín, huevo, hongos shitake, diente de dragón.",
-            "image": "./data/data-img/miso-ramen.jpg",
+            "image": "https://i.imgur.com/fN1Loge.jpg",
             "quantity": 0
         },
         {
@@ -13,7 +13,7 @@
             "name": "Shio Ramen",
             "price": "6990",
             "Description": "Base salada, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/shio-ramen.jpg",
+            "image": "https://i.imgur.com/RYmnBPJ.jpg",
             "quantity": 0
         },
         {
@@ -21,7 +21,7 @@
             "name": "Shouyu Ramen",
             "price": "6990",
             "Description": "Base dashi, carne, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/shouyu-ramen.jpg",
+            "image": "https://i.imgur.com/0PdEjPW.jpg",
             "quantity": 0
         },
         {
@@ -29,7 +29,7 @@
             "name": "Tonkotsu Ramen",
             "price": "6990",
             "Description": "Base huesos de cerdo, cerdo, cebollín, huevo, alga nori, hongo shitake, diente de dragón.",
-            "image": "./data/data-img/tonkatsu-ramen.jpg",
+            "image": "https://i.imgur.com/SNFUt2Q.jpg",
             "quantity": 0
         }
     ],
