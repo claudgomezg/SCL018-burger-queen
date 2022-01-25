@@ -2,6 +2,7 @@
 // import { Link } from "react-router-dom";
 import { Header } from "./Header";
 import MenuOrder from "./Order";
+// import ClientData from "./Client-Data";
 import React from "react";
 
 const Waitress = () => {
@@ -9,6 +10,8 @@ const Waitress = () => {
         <>
         <div className="waitress-container">
         <Header/>{/*componente header */}
+        
+        {/* <ClientData/> */}
         <MenuOrder/>
         
         </div>
