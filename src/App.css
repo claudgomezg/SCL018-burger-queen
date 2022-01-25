@@ -15,7 +15,6 @@
     left: 0;
     position: fixed;
     width: 100%;
-    
   }
 
   .logo-home {
@@ -124,4 +123,12 @@
   .menu-title {
     align-self: center;
   }
+
+  .ramen-image {
+    height: 40px;
+  }
+  .ramen-btn {
+    margin-right: 10px;
+  }
+
 /* } */

@@ -1,5 +1,8 @@
 import React from 'react'
 import menu from '../data/data.json'
+import Button from 'react-bootstrap/Button';
+import Accordion from 'react-bootstrap/Accordion';
+// import ListGroup from 'react-bootstrap/ListGroup';
 
 
 export const Food = () => {
@@ -8,69 +11,52 @@ export const Food = () => {
     const drinks = menu.drinks
 
     return (
-    <>
-        <h3 className='menu-title'>Ramen</h3>
-        {mainDish.map((e, index) => {
-        return (
-            <button className='ramen-btn' key={index}>
-                {e.name} ${e.price}
-            </button>
-        )
-        })}
+        <>
+            <div className="accordion-container" d-grid gap-2>
+                <Accordion defaultActiveKey={['0']} alwaysOpen>
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Ramen</Accordion.Header>
+                        <Accordion.Body>
+                            {mainDish.map((e, index) => {
+                                return (
 
-        <h3 className='menu-title'>Bebestibles</h3>
-            {drinks.map((e, index) => {
-        return (
-            <button className='side-dish-btn' key={index}>
-                {e.name} ${e.price}
-            </button>
-        )
-        })}
+                                    <Button variant="outline-primary" size="sm" className='ramen-btn' key={index}>
+                                        <img src={e.image} alt="ramenImage" className="ramen-image" />  {e.name} ${e.price}
+                                    </Button>
+                                )
+                            })}
+                        </Accordion.Body>
+                    </Accordion.Item>
 
-        <h3 className='menu-title'>Agregados</h3>
-        {sideDish.map((e, index) => {
-        return (
-            <button className='drinks-btn' key={index}>
-                {e.name} ${e.price}
-            </button>
-        )
-        })}
-    </>
+                    <Accordion.Item eventKey="1">
+                        <Accordion.Header>Bebestibles</Accordion.Header>
+                        <Accordion.Body>
+                            {drinks.map((e, index) => {
+                                return (
+                                    <Button variant="outline-primary" size="sm" className='side-dish-btn' key={index}>
+                                        {e.name} ${e.price}
+                                    </Button>
+                                )
+                            })}
+                        </Accordion.Body>
+                    </Accordion.Item>
+                    <Accordion.Item eventKey="2">
+                        <Accordion.Header>Agregados</Accordion.Header>
+                        <Accordion.Body>
+                            {sideDish.map((e, index) => {
+                                return (
+                                    <Button variant="outline-primary" size="sm" className='drinks-btn' key={index}>
+                                        {e.name} ${e.price}
+                                    </Button>
+                                )
+                            })}
+
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
+            </div>
+        </>
     )
 }
 
-export default Food
-
-// <h2 className= "ramen-title">Ramen</h2>
-// {mainDish.map((e, index) => {
-//     return (
-
-//         <button className="ramen-btn"
-//             key={index}>
-//                 <p className="nav-tags">{e.name} ${e.price} </p>
-//         </button>
-//     );
-
-// })}
-// <h2 className="side-dish-title">Agregados</h2>
-// {sideDish.map((e, index) => {
-//     return (
-//         <button
-//             className="side-dish-btn"
-//             key={index}>
-//                 <p className="nav-tags">{e.name} ${e.price}</p>
-//         </button>
-//     );
-
-// })}
-// <h2 className="drinks-title">Bebestibles</h2>
-// {drinks.map((e, index) => {
-//     return (
-//         <button
-//             className="drinks-btn"
-//             // onClick={}
-//             key={index}>
-//                 <p className="name-tags">{e.name} ${e.price}</p>
-//         </button>
-//     );
-// })}
+export default Food;
