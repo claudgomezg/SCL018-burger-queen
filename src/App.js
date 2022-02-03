@@ -1,9 +1,9 @@
 import './components.css';
 import React, { Fragment } from 'react'
-import WaitressView from './components/waitress.jsx'
+import WaitressView from './components/waitress'
 import Home from './components/home.jsx'
-import KitchenView from './components/kitchen.jsx'
-import DeliverOrders from './components/deliverorders.jsx'
+import KitchenView from './components/kitchen'
+import DeliverOrders from './components/deliverorders'
 
 import {
   BrowserRouter as Router,

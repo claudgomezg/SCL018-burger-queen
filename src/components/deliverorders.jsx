@@ -9,7 +9,7 @@ const DeliverOrders = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
-        const getOrdersInfo = stores.collection('order').where("Estado", "==", "Listo").onSnapshot(snap => {
+        const getOrdersInfo = stores.collection('order').where("status", "==", "done").onSnapshot(snap => {
             const arrayOrders = snap.docs.map(doc => {
                 return {
                     id: doc.id, ...doc.data()
@@ -23,7 +23,7 @@ const DeliverOrders = () => {
     const despacho = async (id) => {
         try {
             document.querySelector('#btn_served' + id).style.backgroundColor = '#000000';
-            swal("¡Listo!", "Orden completada.", "info");
+            swal("¡Listo!", "La orden fue servida.", "success");
         } catch (error) {
             console.log(error)
         }
@@ -42,8 +42,8 @@ const DeliverOrders = () => {
                     tasks.map(item => (
                         <div key={item.id} className="card bg-light mb-3 mt-3 orders_group">
                             <p className="card-header"><strong>Nombre del cliente:</strong> {item.name}</p>
-                            {item.comments
-                                ? <p>Mesa: {item.comments}</p>
+                            {item.tables
+                                ? <p>Mesa: {item.tables}</p>
                                 : null}
                             <span  >
                                 <h5 className="card-title">Resumen del pedido</h5>
@@ -51,14 +51,14 @@ const DeliverOrders = () => {
                                     <li key={element.id}> {element.title} ({element.quantity}) </li>
                                 ))
                                 }
-                                <button className="btn btn-secondary mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>Orden completada</button>
+                                <button className="btn btn-secondary mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>served</button>
 
                             </span>
                         </div>
                     ))
                 }
             </section>
-        </Fragment >
+        </Fragment>
     )
 }
 

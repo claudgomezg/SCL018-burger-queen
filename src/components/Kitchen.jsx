@@ -1,4 +1,4 @@
-import { React, Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import '../components.css';
 import stores from './firebaseCofig'
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import Header from './header.jsx'
 import swal from 'sweetalert';
 
 const KitchenView = () => {
-
+  const dateOrder = new Date();
   const [taskss, setTaskss] = useState([])
 
   useEffect(() => {
@@ -24,12 +24,12 @@ const KitchenView = () => {
   const inProcess = async (id) => {
     try {
       await stores.collection('order').doc(id).update({
-        status: "En preparación",
+        status: "In progress",
       })
     } catch (error) {
       console.log(error)
     }
-    swal("¡Listo!", "La orden está en preparación.", "info");
+    swal("¡Listo!", "La orden está en progreso.", "info");
     document.querySelector('#process' + id).style.backgroundColor = '#ff5722';
   }
 
@@ -41,7 +41,7 @@ const KitchenView = () => {
     } catch (error) {
       console.log(error)
     }
-    swal("Excelent", "The order is ready", "success");
+    swal("¡Listo!", "La orden está lista.", "success");
     document.querySelector('#done' + id).style.backgroundColor = '#008000';
   }
 
@@ -59,11 +59,9 @@ const KitchenView = () => {
           taskss.map(item => (
             <div key={item.id} className="card bg-light mb-3 mt-3 orders_group">
               <p className="card-header"><strong>Nombre del cliente:</strong> {item.name}</p>
-              {item.time
-                ? <p>{item.time}</p>
-                : null}
-              {item.comments
-                ? <p>Mesa: {item.comments}</p>
+              
+              {item.tables
+                ? <p>Mesa: {item.tables}</p>
                 : null}
               <span>
                 <h5 className="card-title">Resumen del pedido</h5>
@@ -71,10 +69,10 @@ const KitchenView = () => {
                   <li key={elemento.id}> {elemento.title} ({elemento.quantity}) </li>
                 ))
                 }
-                <button className="btn btn-secondary mt-2 btn_group" id={'process' + item.id} value={item.id} onClick={() => inProcess(item.id)}>En preparación</button>
-                <button className="btn btn-secondary mt-2 btn_group" id={'done' + item.id} value={item.id} onClick={() => done(item.id)}>Listo</button>
+                <button className="btn btn-secondary mt-2 btn_group" id={'process' + item.id} value={item.id} onClick={() => inProcess(item.id)}>In progress</button>
+                <button className="btn btn-secondary mt-2 btn_group" id={'done' + item.id} value={item.id} onClick={() => done(item.id)}>Done</button>
 
-                <h6>Estado: {item.status}</h6>
+                <h6>status: {item.status}</h6>
               </span>
             </div>
           ))

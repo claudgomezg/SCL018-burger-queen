@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
 
 
-const WaitersView = () => {
+const WaitressView = () => {
   const [orders, setOrders] = useState([]);
   const [prices, setPrices] = useState(0);
   const [name, setName] = useState('');
-  const [comments, setComments] = useState('');
+  const [tables, setTables] = useState('');
   const [pending] = useState('pending');
   const [toggler, setToggler] = useState(false);
 
@@ -27,7 +27,7 @@ const WaitersView = () => {
         name: name,
         orders: orders,
         prices: prices,
-        comments: comments,
+        tables: tables,
         status: pending,
       }
       try {
@@ -39,7 +39,7 @@ const WaitersView = () => {
       setName('');
       setOrders([]);
       setPrices(0);
-      setComments('');
+      setTables('');
     }
   }
   const viewRamen = (e) => {
@@ -138,7 +138,7 @@ const WaitersView = () => {
           <h6>Pedido</h6>
           <input className="form-control" value={name} onChange={(e) => { setName(e.target.value) }}
             placeholder='Nombre del cliente' />
-          <input className="form-control" value={comments} onChange={(e) => { setComments(e.target.value) }}
+          <input className="form-control" value={tables} onChange={(e) => { setTables(e.target.value) }}
               placeholder='Número de mesa' />
           <div>
             <table className="table table-light table-bordered table-sm table-responsive">
@@ -172,4 +172,4 @@ const WaitersView = () => {
     
   );
 }
-export default WaitersView;
+export default WaitressView;
