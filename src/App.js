@@ -1,18 +1,42 @@
-import './App.css';
-import Home from './components/Home';
-import Kitchen from './components/Kitchen';
-import Waitress from './components/Waitress';
-import {Route, Routes } from 'react-router-dom';
+import './components.css';
+import React, { Fragment } from 'react'
+import WaitressView from './components/waitress.jsx'
+import Home from './components/home.jsx'
+import KitchenView from './components/kitchen.jsx'
+import DeliverOrders from './components/deliverorders.jsx'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
 const App = () => {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/waitress" element={<Waitress/>}/>
-        <Route path="/kitchen" element={<Kitchen/>}/>
-      </Routes>
-    </>
+    <Fragment>
+      <Router>
+
+        <Switch>
+          <Route exact path="/">
+          <Home></Home>
+          </Route>
+           
+          <Route path="/waitress">
+          <WaitressView></WaitressView>
+          </Route>
+
+          <Route path="/kitchen">
+          <KitchenView></KitchenView>
+          </Route>
+
+          <Route path="/deliverorders">
+          <DeliverOrders></DeliverOrders>
+          </Route>
+
+        </Switch>
+
+      </Router>
+    </Fragment>
   );
 }
 

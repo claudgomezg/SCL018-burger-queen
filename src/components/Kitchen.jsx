@@ -1,18 +1,87 @@
-import React from "react";
+import { React, Fragment, useState, useEffect } from 'react';
+import '../components.css';
+import stores from './firebaseCofig'
 import { Link } from "react-router-dom";
+import Header from './header.jsx'
+import swal from 'sweetalert';
 
-const Kitchen = () => {
-    return (
-        <>
+const KitchenView = () => {
 
-            <div className="kitchen-container">
-                <Link to="/"><button className="back-button">Atrás</button></Link>
+  const [taskss, setTaskss] = useState([])
+
+  useEffect(() => {
+    const getDocsInfo2 = stores.collection('order').onSnapshot(snap => {
+      const arrayOrders = snap.docs.map(doc => {
+        return {
+          id: doc.id, ...doc.data()
+        }
+      })
+      setTaskss(arrayOrders)
+    })
+    return () => getDocsInfo2();
+  }, [])
+
+  const inProcess = async (id) => {
+    try {
+      await stores.collection('order').doc(id).update({
+        status: "En preparación",
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    swal("¡Listo!", "La orden está en preparación.", "info");
+    document.querySelector('#process' + id).style.backgroundColor = '#ff5722';
+  }
+
+  const done = async (id) => {
+    try {
+      await stores.collection('order').doc(id).update({
+        status: "done",
+      })
+    } catch (error) {
+      console.log(error)
+    }
+    swal("Excelent", "The order is ready", "success");
+    document.querySelector('#done' + id).style.backgroundColor = '#008000';
+  }
+
+
+  return (
+    <Fragment>
+      <header className="header">
+        <Header></Header>
+        <Link to="/waitress" className="btn btn-dark mt-2 btn_group">Mesera</Link>
+        <Link to="/deliverorders" className="btn btn-danger mt-2 btn_group">Órdenes</Link>
+      </header>
+
+      <section className="orders_container">
+        {
+          taskss.map(item => (
+            <div key={item.id} className="card bg-light mb-3 mt-3 orders_group">
+              <p className="card-header"><strong>Nombre del cliente:</strong> {item.name}</p>
+              {item.time
+                ? <p>{item.time}</p>
+                : null}
+              {item.comments
+                ? <p>Mesa: {item.comments}</p>
+                : null}
+              <span>
+                <h5 className="card-title">Resumen del pedido</h5>
+                {item.orders.map(elemento => (
+                  <li key={elemento.id}> {elemento.title} ({elemento.quantity}) </li>
+                ))
+                }
+                <button className="btn btn-secondary mt-2 btn_group" id={'process' + item.id} value={item.id} onClick={() => inProcess(item.id)}>En preparación</button>
+                <button className="btn btn-secondary mt-2 btn_group" id={'done' + item.id} value={item.id} onClick={() => done(item.id)}>Listo</button>
+
+                <h6>Estado: {item.status}</h6>
+              </span>
             </div>
-            {/* <div className="meme">
-                <img src={cocina} alt="cocina" id="meme" />
-            </div> */}
-        </>
-    );
-};
+          ))
+        }
+      </section>
+    </Fragment>
+  )
+}
 
-export default Kitchen;
+export default KitchenView;
