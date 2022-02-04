@@ -4,6 +4,13 @@
   flex-direction: row;
   justify-content: space-evenly;
   background-image: url("./images/waitress-bg2.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
 }
 
 .orders_container {
@@ -36,7 +43,7 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.header_date,
+
 .btn_group--menu {
   display: flex;
   width: -webkit-fill-available;
@@ -56,13 +63,18 @@
   align-items: center;
 }
 
-.mt-3.view_menu--options {
+.card {
+  margin: 8px;
+}
+
+.view_menu--options {
   display: flex;
   flex-direction: row;
-  flex-flow: wrap;
-  width: -webkit-fill-available;
+  flex-flow: nowrap;
+  /* width: -webkit-fill-available; */
     justify-content: space-evenly;
     align-items: flex-start;
+    
 }
 
 .view_menu--options--form {
@@ -119,6 +131,7 @@
   display: flex;
   flex-direction: column;
   margin-right: 10%;
+  
 }
 
 .general-container {
@@ -126,4 +139,15 @@
   margin-top: 2%;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }

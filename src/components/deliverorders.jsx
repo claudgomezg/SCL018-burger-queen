@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import '../components.css';
-import stores from './firebaseCofig'
+import stores from './firebaseConfig'
 import { Link } from "react-router-dom";
 import Header from './header.jsx'
 import swal from 'sweetalert';

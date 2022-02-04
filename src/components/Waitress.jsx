@@ -2,12 +2,10 @@ import React, { Fragment, useState } from 'react';
 import ramen from '../data/ramen'
 import drinks from '../data/drinks'
 import '../components.css';
-import stores from './firebaseCofig'
+import stores from './firebaseConfig'
 import swal from 'sweetalert';
 import Header from './header.jsx'
 import { Link } from "react-router-dom";
-
-
 
 const WaitressView = () => {
   const [orders, setOrders] = useState([]);
@@ -17,7 +15,8 @@ const WaitressView = () => {
   const [pending] = useState('pending');
   const [toggler, setToggler] = useState(false);
 
-
+console.log(setOrders);
+console.log(orders);
   const setUser = async (e) => {
     e.preventDefault()
     if (!name.trim()) {
@@ -91,7 +90,7 @@ const WaitressView = () => {
         <button className="btn btn-dark mt-2 btn_group" onClick={(e) => viewDrinks(e)}>Bebestibles</button>
       </div>
 
-      {toggler ? <section className="mt-3 view_menu--options">
+      {toggler ? <section className="mt-2 m2 view_menu--options">
         {
           ramen.items.map(item => {
             return (
@@ -141,7 +140,7 @@ const WaitressView = () => {
           <input className="form-control" value={tables} onChange={(e) => { setTables(e.target.value) }}
               placeholder='Número de mesa' />
           <div>
-            <table className="table table-light table-bordered table-sm table-responsive">
+            <table className="table table-light table-bordered table-lg table-responsive">
               <thead>
                 <tr>
                   <th scope="col">Producto</th>
@@ -163,11 +162,12 @@ const WaitressView = () => {
               </tbody>
             </table>
             <p> TOTAL: ${prices} </p>
-            <input className="btn btn-light mt-2 mb-2 btn_group" class="btn btn-success" type='submit' value='Enviar a cocina' />
+            <input className="btn btn-light mt-2 mb-2 btn_group" className="btn btn-success" type='submit' value='Enviar a cocina' />
           </div>
         </form>
       </section>
     </div>
+
     </Fragment>
     
   );
