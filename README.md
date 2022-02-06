@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Tora Ramen 🥣
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="src/images/logo.png" width="180px" height="150px">
 
-## Available Scripts
+* [1. Introducción](#1-introducción)
+* [2. Presentación del proyecto](#2-Presentación-del-proyecto)
+* [3. Historias de usuario](#3-Historias-de-usuario)
+* [4. Prototipo de alta fidelidad](#4-Prototipo-de-alta-fidelidad)
+* [5. Página finalizada](#5-Página-finalizada)
 
-In the project directory, you can run:
+## 1. Introducción
 
-### `npm start`
+Un pequeño restaurante de ramen, que está creciendo, necesita una interfaz en la que puedan tomar pedidos usando una tablet, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 2. Presentación del proyecto
 
-### `npm test`
+El cliente solicita una aplicación que será ocupada en tablet. Esta deberá ser ocupada por los trabajadores del restaurant. En primer lugar, el mesero podrá ingresar los productos a una comanda, en conjunto al nombre y la mesa del cliente. Esta información tendrá que llevar a manos del cocinero para que pueda preparar los platos. Una vez preparados los pedidos, el cocinero podrá marcar las órdenes como "listas" para que el mesero venga a retirar la orden y servirla a la mesa correspondiente.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 3. Historias de usuario
 
-### `npm run build`
+#### [Historia de usuario 1]: Mesero/a debe poder tomar pedido de cliente
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
+memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
+que se puedan ir preparando en orden.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Criterios de aceptación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Anotar nombre de cliente.
+* Agregar productos al pedido.
+* Eliminar productos.
+* Ver resumen y el total de la compra.
+* Enviar pedido a cocina (guardar en alguna base de datos).
+* Se ve y funciona bien en una _tablet_.
 
-### `npm run eject`
+***
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### [Historia de usuario 2]: Jefe de cocina debe ver los pedidos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
+marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
+que un pedido está listo para servirlo a un cliente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Criterios de aceptación
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Ver los pedidos ordenados según se van haciendo.
+* Marcar los pedidos que se han preparado y están listos para servirse.
 
-## Learn More
+#### [Historia de usuario 3]: Meserx debe ver pedidos listos para servir
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Yo como meserx quiero ver los pedidos que están preparados para entregarlos
+rápidamente a los clientes que las hicieron.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Criterios de aceptación
 
-### Code Splitting
+* Ver listado de pedido listos para servir.
+* Marcar pedidos que han sido entregados.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## 4. Prototipo de alta fidelidad
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prototipo Home
 
-### Making a Progressive Web App
+<img src="src/images/home.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Prototipo Mesera
 
-### Advanced Configuration
+<img src="src/images/waitress.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prototipo Cocina
 
-### Deployment
+<img src="src/images/orders.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Prototipo Pedidos entregados
 
-### `npm run build` fails to minify
+<img src="src/images/delivered-orders.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 5. Página finalizada
+
+### Home
+
+<img src="src/images/home-done.png">
+
+### Mesera
+
+<img src="src/images/waitress-done.png">
+
+### Cocina
+
+<img src="src/images/orders-done.png">
+
+### Pedidos entregados
+
+<img src="src/images/delivered-orders-done.png">
+
+
+
+

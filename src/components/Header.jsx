@@ -1,21 +1,16 @@
-import React from "react";
+import '../components.css';
 import { Link } from "react-router-dom";
-import homeBtn from "../assets/home-btn.png";
-import logo from "../assets/logo4.png";
+import React, { Fragment } from 'react';
+import logo from "../images/logo.png";
+
 
 const Header = () => {
     return (
-        <>
-            <nav className="nav-bar">
-                <div className="logo-header">
-                    <img src={logo} alt="logo" />
-                </div>
-                <Link to="/">
-                    <img className="homeBtn" src={homeBtn} alt="home-button">
-                    </img>
-                </Link>
-            </nav>
-        </>
+      <Fragment>
+       <Link to="/">
+       <img className="header_logo" src= {logo} alt="page logo" /></Link>
+      </Fragment>
     );
-};
-export { Header };
+  }
+  
+  export default Header;
