@@ -14,7 +14,7 @@
   width: -webkit-fill-available;
   height: 100%;
   margin: auto;
-  width: 960px;
+  
 }
 
 .kitchen-container {
@@ -36,6 +36,7 @@
   margin: 1em;
   padding: 1em;
   height: max-content;
+  
 }
 
 .header {
@@ -143,7 +144,7 @@
 .orders-container {
   display: flex;
   flex-direction: row;
-  margin-right: 10%;
+  margin-right: 5%;
   flex-wrap: wrap;
 }
 
@@ -153,6 +154,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   position: fixed;
+  margin-left: 1.2%
   
 }
 
@@ -160,4 +162,5 @@
   margin: 10px;
   
 }
+
 

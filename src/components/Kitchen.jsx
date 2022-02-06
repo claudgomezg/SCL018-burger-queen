@@ -68,8 +68,8 @@ const KitchenView = () => {
                   <li key={elemento.id}> {elemento.title} ({elemento.quantity}) </li>
                 ))
                 }
-                <button className="btn btn-secondary mt-2 btn_group" id={'process' + item.id} value={item.id} onClick={() => inProcess(item.id)}>In progress</button>
-                <button className="btn btn-secondary mt-2 btn_group" id={'done' + item.id} value={item.id} onClick={() => done(item.id)}>Done</button>
+                <button className="btn btn-secondary mt-2 btn_group" id={'process' + item.id} value={item.id} onClick={() => inProcess(item.id)}>En preparación</button>
+                <button className="btn btn-secondary mt-2 btn_group" id={'done' + item.id} value={item.id} onClick={() => done(item.id)}>Listo</button>
 
                 <h6>status: {item.status}</h6>
               </span>
