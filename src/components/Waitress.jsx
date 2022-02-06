@@ -134,13 +134,13 @@ console.log(orders);
 
       <section className="view_menu--options--form">
         <form className="register_form bg-dark" onSubmit={setUser}>
-          <h6>Pedido</h6>
+          <h5>Pedido</h5>
           <input className="form-control" value={name} onChange={(e) => { setName(e.target.value) }}
-            placeholder='Nombre del cliente' />
+            placeholder='Nombre del cliente'/>
           <input className="form-control" value={tables} onChange={(e) => { setTables(e.target.value) }}
-              placeholder='Número de mesa' />
+              placeholder='Número de mesa'/>
           <div>
-            <table className="table table-light table-bordered table-lg table-responsive">
+            <table className="table table-dark table-bordered table-lg">
               <thead>
                 <tr>
                   <th scope="col">Producto</th>
@@ -152,7 +152,7 @@ console.log(orders);
                 {orders.map(eachOrder => {
                   return (
                     <tr key={eachOrder.id}>
-                      <td>{eachOrder.title}</td>
+                      <td >{eachOrder.title}</td>
                       <td>{eachOrder.quantity}</td>
                       <td>${eachOrder.cost}</td>
                     </tr>

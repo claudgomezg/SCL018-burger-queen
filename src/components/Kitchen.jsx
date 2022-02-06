@@ -53,7 +53,7 @@ const KitchenView = () => {
         <Link to="/deliverorders" className="btn btn-danger mt-2 btn_group">Órdenes</Link>
       </header>
 
-      <section className="orders_container">
+      <section className="kitchen-container">
         {
           taskss.map(item => (
             <div key={item.id} className="card bg-light mb-3 mt-3 orders_group">

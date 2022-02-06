@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
+  height: 100vh;
   background-image: url("./images/waitress-bg2.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -10,12 +11,15 @@
   top: 0;
   left: 0;
   position: fixed;
-  width: 100%;
+  width: -webkit-fill-available;
+  height: 100%;
+  margin: auto;
+  width: 960px;
 }
 
-.orders_container {
+.kitchen-container {
   display: flex;
-  height: auto;
+  /* height: -webkit-fill-available; */
   flex-flow: wrap;
   justify-content: center;
 }
@@ -25,6 +29,9 @@
   margin: 0.2em;
 }
 
+.btn-success {
+  margin-bottom: 10px;
+}
 .orders_group {
   margin: 1em;
   padding: 1em;
@@ -42,6 +49,7 @@
   width: -webkit-fill-available;
   justify-content: space-evenly;
   align-items: center;
+  height: fit-content;
 }
 
 .btn_group--menu {
@@ -72,16 +80,21 @@
   flex-direction: row;
   flex-flow: nowrap;
   /* width: -webkit-fill-available; */
-    justify-content: space-evenly;
-    align-items: flex-start;
+  justify-content: space-evenly;
+  
     
 }
 
 .view_menu--options--form {
+  display: flex;
   text-align-last: center;
   width: -webkit-fill-available;
+  margin-top: 1%;
 }
+
 .register_form {
+  display: flex;
+  flex-direction: column;
   color: #fff;
 }
 .menu-container {
@@ -129,25 +142,22 @@
 
 .orders-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   margin-right: 10%;
-  
+  flex-wrap: wrap;
 }
 
 .general-container {
   display: flex;
-  margin-top: 2%;
+  margin-top: 16%;
   flex-direction: row;
   justify-content: space-evenly;
+  position: fixed;
+  
 }
 
-.footer {
-  display: flex;
-  position: fixed;
-    height: 50px;
-    background-color: red;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+.table-container {
+  margin: 10px;
+  
 }
+
