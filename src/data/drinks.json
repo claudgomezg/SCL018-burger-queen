@@ -1,0 +1,21 @@
+{
+  "name": "Promociones",
+  "items": [
+    {
+      "title": "Gaseosa",
+      "cost": "1200"
+    },
+    {
+      "title": "Agua gasificada",
+      "cost": "1000"
+    },
+    {
+      "title": "Jugo natural",
+      "cost": "1600"
+    },
+    {
+      "title": "Sake",
+      "cost": "2500"
+    }
+  ]
+}
