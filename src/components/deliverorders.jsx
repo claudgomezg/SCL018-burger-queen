@@ -37,7 +37,7 @@ const DeliverOrders = () => {
                 <Link to="/kitchen" className="btn btn-danger mt-2 btn_group">Cocina</Link>
             </header>
 
-            <section className="orders_container">
+            <section className="kitchen-container">
                 {
                     tasks.map(item => (
                         <div key={item.id} className="card bg-light mb-3 mt-3 orders_group">
@@ -51,7 +51,7 @@ const DeliverOrders = () => {
                                     <li key={element.id}> {element.title} ({element.quantity}) </li>
                                 ))
                                 }
-                                <button className="btn btn-secondary mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>served</button>
+                                <button className="btn btn-secondary mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>Pedido entregado</button>
 
                             </span>
                         </div>
