@@ -4,7 +4,7 @@ import drinks from '../data/drinks'
 import '../components.css';
 import stores from './firebaseConfig'
 import swal from 'sweetalert';
-import Header from './header.jsx'
+import Header from './Header'
 import { Link } from "react-router-dom";
 
 const WaitressView = () => {
@@ -15,8 +15,8 @@ const WaitressView = () => {
   const [pending] = useState('pending');
   const [toggler, setToggler] = useState(false);
 
-console.log(setOrders);
-console.log(orders);
+// console.log(setOrders);
+// console.log(orders);
   const setUser = async (e) => {
     e.preventDefault()
     if (!name.trim()) {

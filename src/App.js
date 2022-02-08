@@ -1,8 +1,8 @@
 import './components.css';
 import React, { Fragment } from 'react'
-import WaitressView from './components/waitress'
-import Home from './components/home.jsx'
-import KitchenView from './components/kitchen'
+import WaitressView from './components/Waitress'
+import Home from './components/Home'
+import KitchenView from './components/Kitchen'
 import DeliverOrders from './components/deliverorders'
 
 import {

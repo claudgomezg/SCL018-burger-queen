@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import '../components.css';
 import stores from './firebaseConfig'
 import { Link } from "react-router-dom";
-import Header from './header.jsx'
+import Header from './Header'
 import swal from 'sweetalert';
 
 const DeliverOrders = () => {
@@ -22,7 +22,7 @@ const DeliverOrders = () => {
 
     const despacho = async (id) => {
         try {
-            document.querySelector('#btn_served' + id).style.backgroundColor = '#000000';
+            document.querySelector('#btn_served' + id).style.backgroundColor = '#008000';
             swal("¡Listo!", "La orden fue servida.", "success");
         } catch (error) {
             console.log(error)
@@ -51,7 +51,7 @@ const DeliverOrders = () => {
                                     <li key={element.id}> {element.title} ({element.quantity}) </li>
                                 ))
                                 }
-                                <button className="btn btn-secondary mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>Pedido entregado</button>
+                                <button className="btn btn-dark mt-2 btn_group" id={"btn_served" + item.id} value={item.id} onClick={() => despacho(item.id)}>Pedido entregado</button>
 
                             </span>
                         </div>
